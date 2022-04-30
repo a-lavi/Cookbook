@@ -12,8 +12,8 @@ header h2 {font-size: 4rem; text-align: center; text-shadow: 2px 2px #888; paddi
 /* flexes nav + main in a row */
 #content {display: flex; flex-flow: row nowrap; justify-content: space-between; align-items: flex-start;}
 
-nav {flex: 1; order: 1; margin-top: 1rem;}
-nav ul {list-style: none;}
+nav {flex: 1; flex: 1 1 auto; order: 1; margin-top: 1rem;}
+nav ul {list-style: none;margin: 0 auto; display: block;}
 nav ul li {margin: 0.5rem; border: 2px outset #fff; border-radius: 5px; padding: 0.2rem; text-align: center;}
 nav ul li:hover {background-color: #fff;}
 nav ul li:hover a {color: #222;}
@@ -23,13 +23,13 @@ nav ul li.active a {color: #fff;}
 
 /* ist flex-item from #content and flexes 3 section.recipes */
 main {flex: 5; order: 2; display: flex; flex-flow: row wrap; justify-content: flex-start; padding: 1em;}
-main section.recipe {flex: 0 1 auto; width: 31%; box-sizing: border-box; border: 1px solid #666; margin: 0.5rem; padding: 1rem; border-radius: 0.5rem; 
+main section.recipe {flex: 1 1 auto; width: 31%; box-sizing: border-box; border: 1px solid #666; margin: 0.5rem; padding: 1rem; border-radius: 0.5rem; 
     box-shadow: 2px 2px 1px #666;}
 main section.recipe img {width: 100%; height: auto;}
 
 /* Hamburger menu */
 /* Placeholder */
-nav .menu-icon {cursor: pointer; display: none; padding: 28px 20px; position: relative; user-select: none;}
+nav .menu-icon {cursor: pointer; display: none; padding: 10px 20px; position: relative; user-select: none;}
 /* One Hamburger line */
 nav .menu-icon .navicon { background: #333; display: block; height: 2px; position: relative; transition: background .2s ease-out; width: 18px;}
 /* Two other Hamburger lines */
@@ -47,14 +47,15 @@ nav .menu-btn:checked ~ .menu-icon .navicon:after {transform: rotate(45deg);}
 /* now 2 half crosses */
 nav .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before, nav .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {top: 0;}
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 800px) {
 	html {font-size: 12pt;}
 	body {margin:0.5rem;}
     header {display: none;}
     #content {flex-flow: column nowrap;}
-    main {flex-flow: column nowrap; }
+    main {flex-flow: column nowrap;}
     main section.recipe {width: 100%; margin: 0.5rem 0;}
+    nav {width: 100%;}
     nav ul {display: none;}
-    nav ul li {border: 1px solid #fff; border-radius: 3px; padding: 0.2rem 1.5rem;}
+    nav ul li {border: 1px solid #fff; border-radius: 3px; padding: 0.2rem 1.5rem; display: block;}
     nav .menu-icon {display: inline-block;}
 }
