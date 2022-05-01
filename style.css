@@ -1,0 +1,145 @@
+html {
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+
+body {
+  background-color: #60a9ff;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  max-width: 1000px;
+  width: 100%;
+  
+}
+.container-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: aliceblue;
+  margin-right: 10px;
+  width: 20%;
+
+
+}
+.left-nav{
+  display: flex;
+  flex-direction: column;
+}
+.container-right{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1000px;
+  width: 80%;
+}
+.first-row{
+  background-color: aliceblue;
+  display: flex;
+  flex-direction: row;
+  padding-left: 10px;
+  padding-top:10px;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-between;
+
+  
+}
+.second-row{
+  background-color: aliceblue;
+  display: flex;
+  flex-direction: row;
+  padding-left: 10px;
+  padding-top:10px;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-between;
+
+  
+}
+.burger {
+  display: flex;
+  flex-direction: column;
+  max-width: 200px;
+  margin-right: 10px;
+  
+}
+.burger p{
+  display: flex;
+  flex-wrap: wrap;
+}
+.left-nav a {
+  margin-top: 2rem;
+  text-decoration: none;
+}
+}
+.left-nav a {
+  margin-top: 10px;
+}
+.left-nav :last-child{
+  margin-bottom: 5rem;
+}
+.dropdown {
+  
+  position: relative;
+}
+.dropdown{
+  display:none;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  width: 30%;
+  overflow: auto;
+  box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.4);
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.dropdown-content a {
+  display: block;
+  color: #000000;
+  padding: 5px;
+  text-decoration: none;
+}
+.dropdown-content a:hover {
+  color: #FFFFFF;
+  background-color: #00A4BD;
+}
+
+@media (max-width: 500px){
+  .container {
+    flex-direction: column;
+  
+  }
+  .container-left{
+    display:none;
+    
+  }
+  .container-right{
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .first-row{
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+  .second-row{
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+  .dropdown{
+    display:inline-block ;
+  }
+}
+
+  
+  
